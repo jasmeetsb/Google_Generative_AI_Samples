@@ -1,4 +1,4 @@
-# Vertex AI and Palm API Samples
+# Vertex AI and Palm API(Palm 2 Model) Samples
 Google Vertex AI - Palm API Samples for Generative AI Use Cases
 
 **Sample Notebooks:**
