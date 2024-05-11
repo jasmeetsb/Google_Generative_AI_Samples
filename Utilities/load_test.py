@@ -1,5 +1,4 @@
-
-
+#Load test script to generate N concurrent requests to an API end point
 
 import asyncio
 import aiohttp
