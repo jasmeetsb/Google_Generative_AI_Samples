@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Display</title>
+    <script src="https://cdn.socket.io/4.0.0/socket.io.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var socket = io();
+
+            socket.on('connect', function() {
+                console.log('Websocket connected!');
+            });
+
+            socket.on('image change', function(data) {
+                document.getElementById('animalImage').src = `/static/${data.new_image}`;
+            });
+        });
+    </script>
+</head>
+<body>
+    <h1>Image Display</h1>
+    <img id="animalImage" src="{{ url_for('static', filename=image_name) }}" alt="Animal Image">
+</body>
+</html>
